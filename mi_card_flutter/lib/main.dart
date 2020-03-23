@@ -8,7 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
 
-  var mainColor = Colors.teal;
+  var mainColor = Colors.red[600];
   var contrastColor = Colors.white;
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,11 @@ class MyApp extends StatelessWidget {
                       ),
                       Text(
                         "Jeferson Oliveira",
-                        style: TextStyle(fontWeight: FontWeight.bold, color: contrastColor, fontSize: 24),
+                        style: TextStyle(fontWeight: FontWeight.bold, color: contrastColor, fontSize: 40, fontFamily: "Pacifico"),
                       ),
                       Text(
                         "iOS and Flutter Developer",
-                        style: TextStyle(color: contrastColor, fontSize: 16),
+                        style: TextStyle(color: contrastColor, fontSize: 16, fontFamily: "SourceSansPro"),
                       ),
                       Container(
                         margin: EdgeInsets.symmetric(vertical: 8),
