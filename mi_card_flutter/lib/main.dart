@@ -7,40 +7,77 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  var mainColor = Colors.teal;
+  var contrastColor = Colors.white;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
           home: Scaffold(
-            backgroundColor: Colors.teal,
+            backgroundColor: mainColor,
             body: SafeArea(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    color: Colors.red,
-                    width: 100,
-                  ),
-                  Column(
+              child: Padding(
+                padding: EdgeInsets.all(24),
+                child: Center(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.yellow,
+                      CircleAvatar(
+                          radius: 70,
+                          backgroundImage: NetworkImage("https://media-exp1.licdn.com/dms/image/C4E03AQFxKThmCncP1A/profile-displayphoto-shrink_200_200/0?e=1590624000&v=beta&t=MopALICUOTFtzRw6df9EOh55f7fvEH-UjcoK3DjiFmg"),
+                      ),
+                      Text(
+                        "Jeferson Oliveira",
+                        style: TextStyle(fontWeight: FontWeight.bold, color: contrastColor, fontSize: 24),
+                      ),
+                      Text(
+                        "iOS and Flutter Developer",
+                        style: TextStyle(color: contrastColor, fontSize: 16),
                       ),
                       Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.green,
+                        margin: EdgeInsets.symmetric(vertical: 8),
+                        color: Colors.amber,
+                        width: 150,
+                        height: 1,
+                      ),
+                      Container(
+                        height: 56,
+                        margin: EdgeInsets.symmetric(vertical: 8),
+                        padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                        color: contrastColor,
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.phone,
+                              color: mainColor,
+                              size: 24,
+                            ),
+                            Padding(padding: EdgeInsets.all(8)),
+                            Text('+55 71 98337-7911', style: TextStyle(color: mainColor, fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 56,
+                        margin: EdgeInsets.symmetric(vertical: 8),
+                        padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                        color: contrastColor,
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.mail,
+                              color: mainColor,
+                              size: 24,
+                            ),
+                            Padding(padding: EdgeInsets.all(8)),
+                            Text('jefersonoliver7@gmail.com', style: TextStyle(color: mainColor, fontWeight: FontWeight.bold),)
+                          ],
+                        ),
                       )
+
                     ],
                   ),
-                  Container(
-                    color: Colors.blue,
-                    width: 100,
-                  )
-
-                ],
+                ),
               ),
             ),
           ),
